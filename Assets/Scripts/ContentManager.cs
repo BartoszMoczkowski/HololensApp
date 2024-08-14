@@ -30,7 +30,7 @@ public class ContentManager : MonoBehaviour
 
             Step step = new Step();
             step.text_paths = System.IO.Directory.GetFiles(step_path, "*.txt");
-            step.img_paths = System.IO.Directory.GetFiles(step_path, "*.jpg");
+            step.img_paths = System.IO.Directory.GetFiles(step_path, "*.jpeg");
             step.video_paths = System.IO.Directory.GetFiles(step_path, "*.mp4");
 
 

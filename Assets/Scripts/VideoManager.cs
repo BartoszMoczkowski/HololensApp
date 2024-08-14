@@ -25,6 +25,7 @@ public class VideoManager : MonoBehaviour
     {
         player.url = path;
         player.Prepare();
+        player.Play();
 
     }
 
