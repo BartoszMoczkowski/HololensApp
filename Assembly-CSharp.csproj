@@ -60,9 +60,16 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\2022.3.20f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\EyeTracking.cs" />
+    <Compile Include="Assets\Scripts\ModeController.cs" />
     <Compile Include="Assets\Scripts\ImageManager.cs" />
+    <Compile Include="Assets\Scripts\AddressInput.cs" />
     <Compile Include="Assets\Scripts\TextManager.cs" />
+    <Compile Include="Assets\Scripts\ListController.cs" />
+    <Compile Include="Assets\Scripts\DisplaySizeUpdate.cs" />
+    <Compile Include="Assets\Scripts\TutorialController.cs" />
     <Compile Include="Assets\Scripts\ContentManager.cs" />
+    <Compile Include="Assets\Scripts\DebbugWindow.cs" />
     <Compile Include="Assets\Scripts\VideoManager.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -72,17 +79,29 @@
     <None Include="Assets\Resources\Recipie_meat\step_2\text.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
     <None Include="Assets\Resources\Recipie_meat\step_4\text.txt" />
+    <None Include="Assets\Resources\Recipie_meat_2\step_4\text.txt" />
+    <None Include="Assets\Resources\Recipie_meat_2\step_3\text.txt" />
     <None Include="Assets\Resources\Recipie_meat\step_1\text.txt" />
+    <None Include="Assets\Resources\Recipie_meat_2\step_15\text.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
+    <None Include="Assets\Resources\Recipie_meat_2\step_12\text.txt" />
     <None Include="Assets\Resources\Recipie_meat\step_11\text.txt" />
     <None Include="Assets\Resources\Recipie_meat\step_5\text.txt" />
     <None Include="Assets\Resources\Recipie_meat\step_0\text.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
     <None Include="Assets\Resources\Recipie_meat\step_9\text.txt" />
+    <None Include="Assets\Resources\Recipie_meat_2\step_1\text.txt" />
+    <None Include="Assets\Resources\Recipie_meat_2\step_10\text.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
+    <None Include="Assets\Resources\Recipie_meat_2\step_14\text.txt" />
+    <None Include="Assets\Resources\Recipie_meat_2\step_5\text.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
+    <None Include="Assets\Resources\Recipie_meat_2\step_6\text.txt" />
     <None Include="Assets\Resources\Recipie_meat\step_12\text.txt" />
+    <None Include="Assets\Resources\Recipie_meat_2\step_2\text.txt" />
     <None Include="Assets\Resources\Recipie_meat\step_7\text.txt" />
+    <None Include="Assets\Resources\Recipie_meat_2\step_13\text.txt" />
+    <None Include="Assets\Resources\Recipie_meat_2\step_8\text.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
     <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
@@ -94,14 +113,18 @@
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
     <None Include="Assets\Resources\Recipie_meat\step_13\text.txt" />
     <None Include="Assets\Resources\Recipie_meat\step_14\text.txt" />
+    <None Include="Assets\Resources\Recipie_meat_2\step_7\text.txt" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
+    <None Include="Assets\Resources\Recipie_meat_2\step_9\text.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
     <None Include="Assets\Resources\Recipie_meat\step_8\text.txt" />
+    <None Include="Assets\Resources\Recipie_meat_2\step_11\text.txt" />
     <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
     <None Include="Assets\Resources\Recipie_meat\step_15\text.txt" />
+    <None Include="Assets\Resources\Recipie_meat_2\step_0\text.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Sprite.shader" />
   </ItemGroup>
   <ItemGroup>
@@ -431,6 +454,10 @@
     </Reference>
     <Reference Include="ReportGeneratorMerged">
       <HintPath>Library\PackageCache\com.unity.testtools.codecoverage@1.2.5\lib\ReportGenerator\ReportGeneratorMerged.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>Library\PackageCache\jillejr.newtonsoft.json-for-unity@f2c6cb0981\Plugins\Newtonsoft.Json Editor\Newtonsoft.Json.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.VisualScripting.Antlr3.Runtime">

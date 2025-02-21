@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Networking;
 
 public class TextManager : MonoBehaviour
 {
@@ -19,13 +20,26 @@ public class TextManager : MonoBehaviour
         
     }
 
-    public bool LoadText(string path)
+    public IEnumerator LoadText(string path)
     {
+        UnityWebRequest www = UnityWebRequest.Get(path);
+        yield return www.SendWebRequest();
 
-        string text = System.IO.File.ReadAllText(path);
+        if (www.result != UnityWebRequest.Result.Success)
+        {
+            Debug.Log(www.error);
+        }
+        else
+        {
+            // Show results as text
+            string text = www.downloadHandler.text;
+            Debug.Log(text);
 
-        textMeshPro.text = text;
+            // Or retrieve results as binary data
+            //byte[] results = www.downloadHandler.data;
+            textMeshPro.text = text;
+        }
 
-        return true;
+
     }
 }
